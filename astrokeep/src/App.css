@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+.App {
+  text-align: center;
+}
+
+main {
+  position: relative;
+  margin: 0;
+  min-height: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  height: 15vh;
+  background-color: black;
+  color: white;
+}
+
+.new-note-container {
+  display: flex;
+  justify-content: center;
+}
+
+.new-note-box {
+  width: 30%;
+  box-shadow: 2px 2px 4px grey;
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  position: relative;
+  border-radius: 10px 10px;
+}
+
+.new-note-box > input {
+  border: none;
+  outline: none;
+  display: block;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border: none;
+  font-family: 'Lora', serif;
+}
+
+.new-note-box > textarea {
+  border: none;
+  outline: none;
+  display: block;
+  padding: 0.5rem;
+  height: 10vh;
+  font-size: 1rem;
+  border: none;
+  font-family: 'Lora', serif;
+}
+
+.note-add-btn {
+  position: absolute;
+  background-color: black;
+}
+
+.note-box {
+  width: 20%;
+  box-shadow: 3px 3px 6px grey;
+  padding: 1rem 1rem;
+  margin-top: 2rem 1rem;
+  position: relative;
+  border-radius: 10px 10px;
+}
+
+.footer {
+  /* display: flex;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  height: 10vh;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+ */
+
+
+  position: absolute;
+  border: 2px solid;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+
