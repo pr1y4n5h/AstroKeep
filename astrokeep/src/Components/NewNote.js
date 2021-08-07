@@ -8,6 +8,8 @@ export const NewNote = ({passNotes}) => {
     content: "",
   });
 
+  const [hideText, setHideText] = useState(false) 
+
   function noteDataHandler(event) {
     const { name, value } = event.target;
 
@@ -20,24 +22,30 @@ export const NewNote = ({passNotes}) => {
   }
 
   function addNoteHandler() {
-      passNotes()
+        passNotes(note) 
+        setNote({
+          title: "",
+          content: "",
+        })   
   }
 
   return (
-    <div className="new-note-container">
+    <div className="new-note-container" >
       <form className="new-note-box">
+      {hideText &&
         <input
           value={note.title}
           onChange={noteDataHandler}
           name="title"
           placeholder="Title"
           autoComplete="off"
-        />
+        />}
         <textarea
           value={note.content}
           onChange={noteDataHandler}
           name="content"
           placeholder="Write a note..."
+          onClick={() => setHideText(true)}
         />
         <Button onClick={addNoteHandler} className="note-add-btn">
           <AddIcon />
